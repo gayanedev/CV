@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!--  <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Gayane Hovhannisyan</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        body,html{
+            min-height: 100%;
+           
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+        }
+        body{
+            background-color: #fcfcfc;
+        }
+        a,a:hover{
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+        }
+		.clearfix:before, .clearfix:after {
+		    display: table;
+		    content: " ";
+		}
+		.clearfix:after {
+    		clear: both;
+		}
+        header{
+            /*padding: 50px 30px 50px 30px;*/
+           /*background-color: #f5fbfa;*/
+           margin-bottom: 20px;
+           /*border-bottom: 1px solid #eee*/
+        }
+        .header-content{
+            background-color: #fff;
+            border-top: 5px solid #FB4E4D;
+        }
+        .wrapper{
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        .top-box{
+            width: 100%;
+            float: left;
+        }
+        .name{
+            margin-bottom: 0;
+        }
+        .white-box{
+            background-color: #fff;
+            width: 100%;
+            float: left;
+            -webkit-box-shadow: 0 0 10px 0 #e7e7e7;
+            -moz-box-shadow: 0 0 10px 0 #e7e7e7;
+            box-shadow: 0 0 10px 0 #e7e7e7;
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+        .white-box a{
+            color: #2e3bff;
+        }
+        .fl{
+            float: left;
+        }
+        .fr{
+            float: right;
+        }
+        .image-box img{
+            max-width: 300px;
+            vertical-align: top;
+        }
+        .white-color{
+          color: #fff;
+        }
+        ul {
+            list-style: none;
+        }
+        ul li{
+            margin-bottom: 5px;
+        }
+        .bio-box{
+            padding: 20px 30px 10px 30px;
+        }
+        h4.bio{
+            margin: 0 0 20px 0;
+        }
+        .social-links a{
+            display: table;
+            color: #fff;
+            width: 45px;
+            height: 45px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;    font-size: 20px;
+            padding: 10px;
+            text-align: center;
+
+        }
+        .social-links{
+            text-align: center;
+            background-color: #FB4E4D;
+            padding: 5px 0;
+        }
+        .social-links a i{
+            color: #fff;
+        }
+        .social-links li{
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 0;
+        }
+        .block-title{
+            color: #FB4E4D;
+        }
+        h2{
+            margin-bottom: 20px;
+        }
+        p{
+            margin-bottom: 10px;
+            line-height: 28px;
+        }
+        #filters
+        {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            justify-content: space-around;
+        }
+        #filters li{
+            display: inline-block;
+            width: 100%;
+        }
+        #filters li button{
+            width: 100%;
+            cursor: pointer;
+            border: 1px solid #fff;
+            padding: 10px;
+        }
+        #filters li button:focus{
+            outline: none;
+        }
+        .item {
+            width: 25%;
+            padding: 2px;
+            height: auto;
+            float: left;
+            /*margin: 2px;*/
+        }
+        .item img{
+            width: 100%;
+        }
+        .blue { background: blue; }
+
+        .selected {
+            background: #FB4E4D;
+            color: white;
+        }
+
+        /**** Isotope Filtering ****/
+
+        .isotope-item {
+            z-index: 2;
+        }
+
+        .isotope-hidden.isotope-item {
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /**** Isotope CSS3 transitions ****/
+
+        .isotope,
+        .isotope .isotope-item {
+            -webkit-transition-duration: 0.8s;
+            -moz-transition-duration: 0.8s;
+            transition-duration: 0.8s;
+        }
+
+        .isotope {
+            -webkit-transition-property: height, width;
+            -moz-transition-property: height, width;
+            transition-property: height, width;
+        }
+
+        .isotope .isotope-item {
+            -webkit-transition-property: -webkit-transform, opacity;
+            -moz-transition-property:    -moz-transform, opacity;
+            transition-property:         transform, opacity;
+        }
+        .icon-bg{
+            background: url("images/sprite.png") no-repeat;
+        }
+        .guru{
+
+            background-position: 11px 13px;
+        }
+        .upwork{
+            background-position: -64px 13px;
+        }
+        .peopleperhour{
+            background-position: 11px -23px;
+        }
+        .freelancer{
+            background-position: 11px -59px;
+        }
+        .col-6{
+            width: 45%;
+            display: inline-block;
+        }
+        .education{
+            position: relative;
+        }
+        .education-2{
+            margin: 40px 0 0 0;
+
+        }
+        .education-1:after{
+            content: " ";
+            position: absolute;
+            width: 10%;
+            height: 1px;
+            background: #c4b6b6;
+            left: 100%;
+            top: 50%;
+        }
+        .education-1:before{
+            content: " ";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #FB4E4D;
+            top: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            right: -10%;
+            margin-top: -5px;
+            z-index: 10;
+            margin-right: -10px;
+        }
+        .education-2:after{
+            content: " ";
+            position: absolute;
+            width: 10%;
+            height: 1px;
+            background: #c4b6b6;
+            right: 100%;
+            top: 50%;
+        }
+        .education-2:before{
+            content: " ";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #FB4E4D;
+            top: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            left: -10%;
+            margin-top: -5px;
+            z-index: 10;
+            margin-left: -10px;
+        }
+        .education-info{
+            position: relative;
+            width: 100%;
+            float: left;
+        }
+        .education-info:after{
+            content: " ";
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            background: #c4b6b6;
+            right: 50%;
+            top: 0;
+        }
+        .portfolio{
+            min-height: 800px;
+        }
+        .bio-box b{
+            display: inline-block;
+            min-width: 110px;
+        }
+        .bio-box a{
+            text-decoration: none;
+            color: #333;
+        }
+        .bio-box li{
+            margin-bottom: 15px;
+        }
+        .flex{
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            justify-content: center;
+            -webkit-justify-content: center;
+            -webkit-box-align: center;
+            -moz-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+        @media only screen and (max-width: 1100px) {
+            .education-2:before{
+                margin-left: -9px;
+            }
+            .education-1:before{
+                margin-right: -9px;
+            }
+        }
+        @media only screen and (max-width: 800px) {
+            .image-box{
+                width: 100%;
+            }
+            .image-box img{
+                display: table;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<header>
+ <div class="wrapper clearfix">
+     <div class="header-content">
+         <div class="top-box">
+             <div class="fl image-box">
+                 <img src="images/Gayane.jpg" alt="Meri Chkolyan">
+             </div>
+             <div class="fl bio-box">
+                 <ul>
+                     <li>
+                         <h2 style="margin-bottom: 0;">Gayane Hovhannisyan</h2>
+                         <h4 class="bio"> Web Developer</h4>
+                         <p>
+                             I am a Senior web developer and I have 5+ years experience.
+                         </p>
+                     </li>
+                     <li>
+                         <span> <b> Age: </b> 25</span>
+                     </li>
+                     <li>
+                         <span> <b> Email: </b> <a href="mailto:gayane.hovhannisyan94@gmail.com">gayane.hovhannisyan94@gmail.com</a></span>
+                     </li>
+                     <li>
+                         <span> <b> Phone:  </b> <a href="tel:+37493492890">+37493492890</a></span>
+                     </li>
+                     <li>
+                         <span> <b> Freelance:  </b> Jun 2018 up to now </span>
+                     </li>
+                 </ul>
+
+             </div>
+         </div>
+         <div class="clearfix"></div>
+         <ul class="social-links">
+             <li>
+                 <a href="https://github.com/Meri-web" target="_blank" title="GitHUb"><i class="fa fa-github" aria-hidden="true"></i></a>
+             </li>
+             <li>
+                 <a href="https://www.linkedin.com/in/gayane-hovhannisyan-35b050149/" target="_blank" title="Linkedin"> <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+             </li>
+             <li>
+                 <a href="https://www.upwork.com/o/profiles/users/_~012ad79687083074ec/" target="_blank" title="Upwork" class="upwork icon-bg"> </a>
+             </li>
+             <!--<li>-->
+             <!--<a href="#" target="_blank" title="Guru" class="guru icon-bg"> </a>-->
+             <!--</li>-->
+             <li>
+                 <a href="#" target="_blank" title="Peopleperhour" class="peopleperhour icon-bg"> </a>
+             </li>
+             <li>
+                 <a href="https://www.freelancer.com/u/merichkolyan?w=f" target="_blank" title="Freelancer" class="freelancer icon-bg"> </a>
+             </li>
+             <li>
+                 <a href="https://join.skype.com/invite/dFhwWT6jss2D" target="_blank" title="Skype"> <i class="fa fa-skype" aria-hidden="true"></i></a>
+             </li>
+         </ul>
+     </div>
+     </div>
+
+
+</header>
+<div>
+    <div class="wrapper">
+      
+        <h2 class="block-title">Skills</h2>
+        <div class="white-box">
+            <p>
+          Experienced Frontend Web Developer with a demonstrated history of working in the telecommunications industry. Skilled in Web Design, SASS, Bootstrap, Cascading Style Sheets (CSS), WordPress and Magento. Strong engineering professional with a Bachelor's degree focused in Computer Programming from European Regional Academy (ERA).
+            </p>
+            <p>
+                <b> LANGUAGE SKILLS:</b> <br>
+                Armenian        –          Native <br>
+                English         –          Excellent <br>
+                Russian         –          Excellent 
+             
+
+            </p>
+        </div>
+        <h2 class="block-title">Work Experience</h2>
+        <div class="white-box">
+         
+            <p>
+                <b>Junior Web developer</b>
+            </p>
+            <p>
+                Iguan Systems, Armenia<br>
+                Jun 2012 – July 2015 <br>
+                I have been Junior Web developer
+            </p>
+            <p>
+                <b> Senior developer</b>
+            </p>
+            <p>
+                Erasofts, Armenia Yerevan<br>
+                Aug 2015 – Jun 2019 <br>
+                I worked as a Senior web developer, team Leader.
+            </p>
+               <p>
+                <b> Freelancer</b>
+            </p>
+            <p>
+                Jun 2019 up to now <br>        
+            </p>
+            <p>
+                <b> Wordpress Web Developer / Web Designer </b>
+            </p>
+            <p>
+                <a href="https://2rock1.com/" target="_blank">https://2rock1.com/</a>, Fairfield, CT<br>
+            </p>
+        </div>
+        <h2 class="block-title">Formal Education</h2>
+        <div class="education-info">
+            <div class="col-6">
+                <div class="white-box education education-1">
+                    <p>2010 – 2014</p>
+                    <p>
+                        BA (bachelor‘s degree) at European Regional Academy (ERA) of Armenia / Faculty of Information Technologies.
+                </div>
+            </div>
+            <div class="col-6 fr">
+                <div class="white-box education education-2">
+                    <p>2014 – 2016</p>
+                    <p>
+                        MA (master’s degree) at Synopsys Armenia / Faculty of Micro-electronic circuitry and systems of the communication means.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="block-title">Portfolio</h2>
+        <div class="white-box portfolio">
+            <ul id="filters">
+                <li><button data-filter="*" class="selected">Show all</button></li>
+                 <li><button data-filter=".laravel" >Laravel</button></li>
+                <li><button data-filter=".magento" >Magento</button></li>
+                <li><button data-filter=".wordpress">Wordpress</button></li>
+                <li><button data-filter=".shopify">Shopify</button></li>
+                <!--<li><button data-filter=".green, .blue">green and blue</button></li>-->
+            </ul>
+
+            <div id="container">
+                    <div class="item html_css">
+                        <a href="http://52.36.18.96/" target="_blank">
+                            <img src="images/usbpi.png" alt="usbpi">
+                        </a>
+                    </div>
+                <div class="item laravel">
+                    <a href="http://158.106.138.245/" target="_blank">
+                        <img src="images/valenzano.png" alt="Valenzano">
+                    </a>
+                </div>
+                <div class="item shopify ">
+                    <a href="https://contornobelts.com" target="_blank">
+                        <img src="images/contornoBelts.png" alt="Contorno Belts">
+                    </a>
+                </div>
+                <div class="item wordpress">
+                    <a href="https://cerlos.io" target="_blank">
+                        <img src="images/cerlos.png" alt="cerlos">
+                    </a>
+                </div>
+                <div class="item html_css">
+                    <a href="http://www.mustangcpu.com/" target="_blank">
+                        <img src="images/mustang.png" alt="Mustang">
+                    </a>
+                </div>
+                <div class="item wordpress">
+                    <a href="https://ibagroup.io/" target="_blank">
+                        <img src="images/iba.png" alt="ibagroup">
+                    </a>
+                </div>
+                <div class="item wordpress">
+                    <a href="http://jetdata.io/" target="_blank">
+                        <img src="images/jetdata.png" alt="jetdata">
+                    </a>
+                </div>
+                <div class="item wordpress">
+                    <a href="https://2rock1.com/" target="_blank">
+                        <img src="images/2rock1.png" alt="2rock1">
+                    </a>
+                </div>
+                   <div class="item wordpress">
+                    <a href="https://www.mikeregina.io/" target="_blank">
+                        <img src="images/MikeRegina.png" alt="MikeRegina">
+                    </a>
+                </div>
+                 <div class="item magento">
+                    <a href="https://www.gooshoreca.nl/" target="_blank">
+                        <img src="images/Gooshoreca.png" alt="Gooshoreca">
+                    </a>
+                </div>
+                   <div class="item magento">
+                    <a href="https://www.drunensruiterhuis.nl" target="_blank">
+                        <img src="images/drunens.png" alt="Drunensruiterhuis">
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+<script>
+    $( document ).ready(function() {
+        $(function(){
+
+            var $container = $('#container'),
+                    $filterLinks = $('#filters button');
+
+            $container.isotope({
+                itemSelector: '.item',
+                filter: '*'
+            });
+
+            $filterLinks.click(function(){
+                var $this = $(this);
+
+                // don't proceed if already selected
+                if ( $this.hasClass('selected') ) {
+                    return;
+                }
+
+                $filterLinks.filter('.selected').removeClass('selected');
+                $this.addClass('selected');
+
+                // get selector from data-filter attribute
+                selector = $this.data('filter');
+
+                $container.isotope({
+                    filter: selector
+                });
+
+
+            });
+
+        });
+    });
+    $(function(){
+
+        var $container = $('#container'),
+                $filterLinks = $('#filters button');
+
+        $container.isotope({
+            itemSelector: '.item',
+            filter: '*'
+        });
+
+        $filterLinks.click(function(){
+            var $this = $(this);
+
+            // don't proceed if already selected
+            if ( $this.hasClass('selected') ) {
+                return;
+            }
+
+            $filterLinks.filter('.selected').removeClass('selected');
+            $this.addClass('selected');
+
+            // get selector from data-filter attribute
+            selector = $this.data('filter');
+
+            $container.isotope({
+                filter: selector
+            });
+
+
+        });
+
+    });
+</script>
+</body>
+</html>
